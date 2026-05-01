@@ -13,7 +13,7 @@ MAX_BATCH_SIZE = 5000
 def load_data():
     client = chromadb.PersistentClient(path = DB_PATH)
 
-    collection_name = "support_docs"
+    collection_name = "support_corpus"
 
     try:
         client.delete_collection(collection_name)
@@ -42,7 +42,7 @@ def load_data():
                 documents.append(chunk)
                 metadatas.append({
                     "source": relative_path,
-                    "product": product_tag,
+                    "company": product_tag,
                     "chunk_id": i
                 })
                 ids.append(f"doc_{count}_{i}")

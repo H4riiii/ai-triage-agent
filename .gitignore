@@ -21,3 +21,5 @@ log.txt
 # Vector Database
 chroma_db/
 *.sqlite3
+
+.env
