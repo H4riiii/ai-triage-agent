@@ -17,3 +17,7 @@ support_tickets/*.csv
 
 # Logs
 log.txt
+
+# Vector Database
+chroma_db/
+*.sqlite3
